@@ -8,15 +8,12 @@
 
 int main() {
     chessBoard board;
-    for (int i = 0; i < 8; i++) {
-        board.setPieceAt(1, i, new piecePawn(true));
-        board.setPieceAt(6, i, new piecePawn(false));
-    }
 
-    board.printBoard();
+    piecePawn* whitePawn1 = new piecePawn(true);
+    piecePawn* blackPawn1 = new piecePawn(false);
 
-    board.movePiece(1,0,3,0);
+    board.setPieceAt(1, 4, whitePawn1);
+    board.setPieceAt(6, 4, blackPawn1);
 
-    std::cout << "\nBoard after moving pawn:\n";
     board.printBoard();
 }

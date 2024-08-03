@@ -24,11 +24,6 @@ public:
         if (depth == 0) {
             return evaluateBoard(board);
         }
-
-        if (is_maximizing) {
-            int maxEval = -10000;
-            for (const auto& move : board.)
-        }
     }
 
 private:
@@ -52,4 +47,4 @@ private:
     }
 };
 
-#endif //MINIMAX_H
+#endif

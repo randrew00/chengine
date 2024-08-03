@@ -1,9 +1,5 @@
-//
-// Created by Randrew on 8/3/2024.
-//
-
-#ifndef CHESS_PIECE_H
-#define CHESS_PIECE_H
+#ifndef PIECE_H
+#define PIECE_H
 
 class chessPiece {
 protected:
@@ -15,9 +11,7 @@ public:
 
     bool is_white_piece() const {return is_white;}
     virtual bool isValidMove(int start_x, int start_y, int end_x, int end_y, chessPiece* board[8][8]) = 0;
-
-
-
+    virtual char toChar() = 0;
 };
 
-#endif //CHESS_PIECE_H
+#endif

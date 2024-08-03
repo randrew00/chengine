@@ -1,5 +1,5 @@
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef BOARD_HPP
+#define BOARD_HPP
 
 #include <iostream>
 #include <vector>
@@ -7,42 +7,32 @@
 
 class chessBoard {
 public:
-    chessBoard() {
-        // init nullptrs for positions
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                board[i][j] = nullptr;
-            }
-        }
-    }
-
-    ~chessBoard() {
-        for (auto & i : board) {
-            for (auto & j : i) {
-                delete j;
-            }
-        }
-    }
-
+    chessBoard();
+    ~chessBoard();
+    
     // HELPER FUNCTIONS FOR DETERMINING ELIGIBILITY OF PIECE MOVE
 
-    bool isOccupied(const int x, const int y) const;
+    bool isOccupied(int x, int y) const;
 
-    bool isValidMove(const int start_x, const int start_y, const int end_x, const int end_y) const;
+    bool isValidMove(int start_x, int start_y, int end_x, int end_y) const;
 
-    chessPiece* getPieceAt(const int x, const int y) const;
+    chessPiece* getPieceAt(int x, int y) const;
 
     // FUNCTIONS FOR NAVIGATING/UNDERSTANDING BOARD
 
-    void setPieceAt(const int x, const int y, chessPiece* piece);
+    void setPieceAt(int x, int y, chessPiece* piece);
 
-    void movePiece(const int start_x, const int start_y, const int end_x, const int end_y);
+    void movePiece(int start_x, int start_y, int end_x, int end_y);
 
     std::vector<Move> getAllPossibleMoves(bool is_white) const;
 
     // BASIC UTILITY; UI/UX, User
 
     void printBoard() const;
+
+    // Getter for board
+
+    chessPiece* const (*getBoard() const)[8];
 
 private:
     chessPiece* board[8][8];

@@ -2,6 +2,25 @@
 #include <vector>
 #include "board.hpp"
 
+// Constructor/Destructor
+
+chessBoard::chessBoard() {
+    // init nullptrs for positions
+    for (auto & i : board) {
+        for (auto & j : i) {
+            j = nullptr;
+        }
+    }
+}
+
+chessBoard::~chessBoard() {
+    for (auto & i : board) {
+        for (auto & j : i) {
+            delete j;
+        }
+    }
+}
+
 // HELPER FUNCTIONS FOR DETERMINING ELIGIBILITY OF PIECE MOVE
 
 bool chessBoard::isOccupied(const int x, const int y) const {
@@ -74,6 +93,11 @@ void chessBoard::printBoard() const {
         }
         std::cout << '\n';
     }
+}
+
+// Getter impelmentation
+chessPiece* const (*chessBoard::getBoard() const)[8] {
+    return board;
 }
 
 std::vector<Move> chessBoard::generatePossibleMovesForPiece(chessPiece* piece, int x, int y) const {

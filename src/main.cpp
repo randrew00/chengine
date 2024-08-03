@@ -4,16 +4,12 @@
 
 #include <iostream>
 #include "board.hpp"
-#include "pawn.hpp"
+#include "setup.hpp"
 
 int main() {
-    chessBoard board;
+    chessBoard chessBoard;
 
-    piecePawn* whitePawn1 = new piecePawn(true);
-    piecePawn* blackPawn1 = new piecePawn(false);
+    setupBoard(chessBoard);
 
-    board.setPieceAt(1, 4, whitePawn1);
-    board.setPieceAt(6, 4, blackPawn1);
-
-    board.printBoard();
+    chessBoard.printBoard();
 }

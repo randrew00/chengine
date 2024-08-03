@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "piece.h"
+#include "piece.hpp"
 
 class piecePawn : public chessPiece {
 public:

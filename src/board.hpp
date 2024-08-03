@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include "piece.h"
+#include "piece.hpp"
 
 class chessBoard {
 public:

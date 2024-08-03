@@ -1,7 +1,7 @@
 #ifndef MINIMAX_H
 #define MINIMAX_H
 
-#include "board.h"
+#include "board.hpp"
 #include <algorithm>
 
 class minimax {

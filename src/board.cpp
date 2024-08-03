@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "board.h"
+#include "board.hpp"
 
 // HELPER FUNCTIONS FOR DETERMINING ELIGIBILITY OF PIECE MOVE
 

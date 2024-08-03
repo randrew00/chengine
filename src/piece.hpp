@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "moves.h"
+#include "moves.hpp"
 
 class chessPiece {
 public:

@@ -1,4 +1,4 @@
-#include "pawn.h"
+#include "pawn.hpp"
 
 bool piecePawn::isValidMove(int start_x, int start_y, int end_x, int end_y, chessPiece* const board[8][8]) const {
     int direction = is_white ? 1 : -1;

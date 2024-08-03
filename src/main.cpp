@@ -3,8 +3,8 @@
 //
 
 #include <iostream>
-#include "board.h"
-#include "pawn.h"
+#include "board.hpp"
+#include "pawn.hpp"
 
 int main() {
     chessBoard board;

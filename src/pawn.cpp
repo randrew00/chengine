@@ -1,10 +1,12 @@
 #include "pawn.hpp"
+#include <iostream>
 
 bool piecePawn::isValidMove(int start_x, int start_y, int end_x, int end_y, const std::vector<std::vector<chessPiece*>>& board) const {
     int direction = is_white ? 1 : -1;
     if (start_x + direction == end_x && start_y == end_y && board[end_x][end_y] == nullptr) {
         return true;
     }
+    std::cout << "invalid move!\n";
     return false;
 }
 

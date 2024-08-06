@@ -42,7 +42,7 @@ void chessBoard::setPieceAt(const int x, const int y, chessPiece* piece) {
 
 void chessBoard::movePiece(const int start_x, const int start_y, const int end_x, const int end_y) {
     chessPiece* piece = getPieceAt(start_x, start_y);
-    if (piece) {
+    if (piece && piece->isValidMove(start_x, start_y, end_x, end_y, board)) {
         setPieceAt(end_x, end_y, piece);
         setPieceAt(start_x, start_y, nullptr);
     }

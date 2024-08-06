@@ -14,6 +14,5 @@ int main() {
             << move.end_x << ", " << move.end_y << ")\n";
         }
     }
-
   
 }

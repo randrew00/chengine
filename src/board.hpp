@@ -15,8 +15,6 @@ public:
 
     bool isOccupied(int x, int y) const;
 
-    bool isValidMove(int start_x, int start_y, int end_x, int end_y) const;
-
     chessPiece* getPieceAt(int x, int y) const;
 
     // FUNCTIONS FOR NAVIGATING/UNDERSTANDING BOARD
@@ -32,18 +30,14 @@ public:
     void print() const;
 
     // Getter for board
-    chessPiece* const (*getBoard() const)[8];
+    std::vector<std::vector<chessPiece*>> getBoard() const;
 
 private:
-    chessPiece* board[8][8];
+    std::vector<std::vector<chessPiece*>> board;
 
     void setupBoard();
 
-    std::vector<Move> generatePossibleMovesForPiece(chessPiece* piece, int x, int y) const;
-
     chessPiece* findKing(bool is_white) const;
-
-    bool isKingInCheck(int x, int y, bool is_white) const;
 
     bool isMoveLegal(const Move& move, bool is_white) const;
 };

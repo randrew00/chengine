@@ -1,5 +1,5 @@
 #include "piece_factory.hpp"
-#include <iostream>
+
 chessPiece* pieceFactory::createPiece(char type, bool is_white) {
     switch (type) {
         case 'P':

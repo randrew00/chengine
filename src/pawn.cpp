@@ -1,6 +1,6 @@
 #include "pawn.hpp"
 
-bool piecePawn::isValidMove(int start_x, int start_y, int end_x, int end_y, chessPiece* const board[8][8]) const {
+bool piecePawn::isValidMove(int start_x, int start_y, int end_x, int end_y, const std::vector<std::vector<chessPiece*>>& board) const {
     int direction = is_white ? 1 : -1;
     if (start_x + direction == end_x && start_y == end_y && board[end_x][end_y] == nullptr) {
         return true;
@@ -8,7 +8,7 @@ bool piecePawn::isValidMove(int start_x, int start_y, int end_x, int end_y, ches
     return false;
 }
 
-std::vector<Move> piecePawn::generatePossibleMoves(int x, int y, chessPiece* const board[8][8]) const {
+std::vector<Move> piecePawn::generatePossibleMoves(int x, int y, const std::vector<std::vector<chessPiece*>>& board) const {
     std::vector<Move> moves;
     int direction = is_white ? 1 : -1;
 

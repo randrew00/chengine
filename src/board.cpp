@@ -77,12 +77,19 @@ std::vector<Move> chessBoard::getAllPossibleMoves(bool is_white) const {
 // BASIC UTILITY; UI/UX, Setup
 
 void chessBoard::setupBoard() {
+
+    for (auto & i : board) {
+    for (auto & j : i) {
+            j = nullptr;
+        }
+    }
+
+    pieceFactory factory;
     for (int i = 0; i < 8; i++) {
-        setPieceAt(1, i, pieceFactory::createPiece('P', true));
-        setPieceAt(6, i, pieceFactory::createPiece('p', false));
+        setPieceAt(1, i, factory.createPiece('P', true));
+        setPieceAt(6, i, factory.createPiece('p', false));
     }
 }
-
 
 void chessBoard::print() const {
     for (int i = 0; i < 8; i++) {
@@ -145,4 +152,8 @@ bool chessBoard::isMoveLegal(const Move& move, bool is_white) const {
         return false;
     }
     return true;
+}
+
+chessPiece* const (*chessBoard::getBoard() const)[8] {
+    return board;
 }

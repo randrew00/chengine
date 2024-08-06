@@ -1,6 +1,6 @@
 #include "piece_factory.hpp"
 
-static chessPiece* createPiece(char type, bool is_white) {
+chessPiece* pieceFactory::createPiece(char type, bool is_white) {
     switch (type) {
         case 'P':
             return new piecePawn(is_white);

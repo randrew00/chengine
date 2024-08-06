@@ -6,7 +6,7 @@
 
 class pieceFactory {
 public:
-    static chessPiece* createPiece(char type, bool is_white);
+    chessPiece* createPiece(char type, bool is_white);
 };
 
 #endif

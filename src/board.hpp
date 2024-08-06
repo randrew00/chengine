@@ -31,6 +31,9 @@ public:
 
     void print() const;
 
+    // Getter for board
+    chessPiece* const (*getBoard() const)[8];
+
 private:
     chessPiece* board[8][8];
 

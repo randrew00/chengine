@@ -1,5 +1,5 @@
-#ifndef PAWN_H
-#define PAWN_H
+#ifndef INCLUDED_PAWN_HPP
+#define INCLUDED_PAWN_HPP
 
 #include <vector>
 

@@ -1,5 +1,5 @@
-#ifndef PIECE_H
-#define PIECE_H
+#ifndef INCLUDED_PIECE_HPP
+#define INCLUDED_PIECE_HPP
 
 #include <vector>
 

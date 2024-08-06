@@ -1,9 +1,10 @@
-#ifndef BOARD_HPP
-#define BOARD_HPP
+#ifndef INCLUDED_BOARD_HPP
+#define INCLUDED_BOARD_HPP
 
 #include <iostream>
 #include <vector>
 #include "piece.hpp"
+#include "piece_factory.hpp"
 
 class chessBoard {
 public:
@@ -28,14 +29,12 @@ public:
 
     // BASIC UTILITY; UI/UX, User
 
-    void printBoard() const;
-
-    // Getter for board
-
-    chessPiece* const (*getBoard() const)[8];
+    void print() const;
 
 private:
     chessPiece* board[8][8];
+
+    void setupBoard();
 
     std::vector<Move> generatePossibleMovesForPiece(chessPiece* piece, int x, int y) const;
 

@@ -5,12 +5,7 @@
 // Constructor/Destructor
 
 chessBoard::chessBoard() {
-    // init nullptrs for positions
-    for (auto & i : board) {
-        for (auto & j : i) {
-            j = nullptr;
-        }
-    }
+    setupBoard();
 }
 
 chessBoard::~chessBoard() {
@@ -79,9 +74,17 @@ std::vector<Move> chessBoard::getAllPossibleMoves(bool is_white) const {
     return possibleMoves;
 }
 
-// BASIC UTILITY; UI/UX, User
+// BASIC UTILITY; UI/UX, Setup
 
-void chessBoard::printBoard() const {
+void chessBoard::setupBoard() {
+    for (int i = 0; i < 8; i++) {
+        setPieceAt(1, i, pieceFactory::createPiece('P', true));
+        setPieceAt(6, i, pieceFactory::createPiece('p', false));
+    }
+}
+
+
+void chessBoard::print() const {
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             if (isOccupied(i, j)) {
@@ -93,11 +96,6 @@ void chessBoard::printBoard() const {
         }
         std::cout << '\n';
     }
-}
-
-// Getter impelmentation
-chessPiece* const (*chessBoard::getBoard() const)[8] {
-    return board;
 }
 
 std::vector<Move> chessBoard::generatePossibleMovesForPiece(chessPiece* piece, int x, int y) const {

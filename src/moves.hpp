@@ -1,5 +1,5 @@
-#ifndef MOVES_H
-#define MOVES_H
+#ifndef INCLUDED_MOVES_HPP
+#define INCLUDED_MOVES_HPP
 
 // Structure for generating possible moves
 

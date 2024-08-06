@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.24)
 
 project(chengine)
 
+set(CMAKE_CXX_STANDARD 17)
+
 add_executable(main ../src/main.cpp
         ../src/piece.hpp
         ../src/pawn.hpp
@@ -10,5 +12,6 @@ add_executable(main ../src/main.cpp
         ../src/moves.hpp
         ../src/pawn.cpp
         ../src/board.cpp
-        ../src/setup.cpp
-        ../src/setup.hpp)
+        ../src/piece_factory.cpp
+        ../src/piece_factory.hpp
+)

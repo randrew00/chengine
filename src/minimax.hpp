@@ -1,5 +1,5 @@
-#ifndef MINIMAX_H
-#define MINIMAX_H
+#ifndef INCLUDED_MINIMAX_HPP
+#define INCLUDED_MINIMAX_HPP
 
 #include "board.hpp"
 #include <algorithm>

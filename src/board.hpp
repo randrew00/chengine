@@ -1,9 +1,10 @@
-#ifndef BOARD_HPP
-#define BOARD_HPP
+#ifndef INCLUDED_BOARD_HPP
+#define INCLUDED_BOARD_HPP
 
 #include <iostream>
 #include <vector>
 #include "piece.hpp"
+#include "piece_factory.hpp"
 
 class chessBoard {
 public:
@@ -13,8 +14,6 @@ public:
     // HELPER FUNCTIONS FOR DETERMINING ELIGIBILITY OF PIECE MOVE
 
     bool isOccupied(int x, int y) const;
-
-    bool isValidMove(int start_x, int start_y, int end_x, int end_y) const;
 
     chessPiece* getPieceAt(int x, int y) const;
 
@@ -28,20 +27,17 @@ public:
 
     // BASIC UTILITY; UI/UX, User
 
-    void printBoard() const;
+    void print() const;
 
     // Getter for board
-
-    chessPiece* const (*getBoard() const)[8];
+    std::vector<std::vector<chessPiece*>> getBoard() const;
 
 private:
-    chessPiece* board[8][8];
+    std::vector<std::vector<chessPiece*>> board;
 
-    std::vector<Move> generatePossibleMovesForPiece(chessPiece* piece, int x, int y) const;
+    void setupBoard();
 
     chessPiece* findKing(bool is_white) const;
-
-    bool isKingInCheck(int x, int y, bool is_white) const;
 
     bool isMoveLegal(const Move& move, bool is_white) const;
 };

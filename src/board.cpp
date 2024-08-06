@@ -84,10 +84,9 @@ void chessBoard::setupBoard() {
         }
     }
 
-    pieceFactory factory;
     for (int i = 0; i < 8; i++) {
-        setPieceAt(1, i, factory.createPiece('P', true));
-        setPieceAt(6, i, factory.createPiece('p', false));
+        setPieceAt(1, i, pieceFactory::createPiece('P', true));
+        setPieceAt(6, i, pieceFactory::createPiece('p', false));
     }
 }
 

@@ -9,7 +9,7 @@ The engine supports both human players and an AI opponent that leverages the **M
 
 ### 1. **Board Setup**
 
--   The chessboard is represented by an 8x8 grid (`std::vector<std::vector<chessPiece*>>`) initialized with `nullptr` values.
+-   The chessboard is represented by an 8x8 grid initialized with `nullptr` values.
 -   Each piece can be placed at a specific position using the `setPieceAt` method, and pieces can be moved using the `movePiece` function.
 -   The board can be printed in a text-based format using the `print` method.
 

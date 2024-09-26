@@ -65,10 +65,21 @@ The engine supports both human players and an AI opponent that leverages the **M
 
 1.  **Clone the repository:**
     
-    `git clone https://github.com/yourusername/chess-engine.git
-    cd chess-engine` 
+    `git clone https://github.com/randrew00/chengine.git` \
+    `cd chengine`
+
+     **OR** 
+
+    `git clone git@github.com:randrew00/chengine.git` \
+    `cd chengine`
     
-2.  **Build using CMake:** Ensure CMake is installed, then follow standard CMake procedures to build the project.
+3.  **Build using CMake:** 
+    In root of project: \
+        `mkdir build` \
+    In build dir \
+        `cmake ..` \
+        `make` 
+    
     
 
 ## Future Enhancements

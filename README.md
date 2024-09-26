@@ -50,16 +50,16 @@ The engine supports both human players and an AI opponent that leverages the **M
 ## Code Structure
 
 
-├── board.hpp       # Definition of the chessBoard class
-├── board.cpp       # Implementation of the chessBoard class
-├── piece.hpp       # Definition of the base chessPiece class
-├── piece.cpp       # Implementation of various chess pieces
-├── piece_factory.hpp  # Definition of pieceFactory for creating pieces
-├── pawn.hpp        # Definition of the pawn piece (inherits chessPiece)
-├── pawn.cpp        # Implementation of pawn-specific logic
-├── minimax.hpp     # Definition of Minimax and Alpha-Beta pruning algorithms
-├── moves.hpp       # Definition of the Move class, representing chess moves
-└── CMakeLists.txt  # CMake configuration for building the project` 
+├── board.hpp       # Definition of the chessBoard class \
+├── board.cpp       # Implementation of the chessBoard class \
+├── piece.hpp       # Definition of the base chessPiece class \
+├── piece.cpp       # Implementation of various chess pieces \
+├── piece_factory.hpp  # Definition of pieceFactory for creating pieces \
+├── pawn.hpp        # Definition of the pawn piece (inherits chessPiece) \
+├── pawn.cpp        # Implementation of pawn-specific logic \
+├── minimax.hpp     # Definition of Minimax and Alpha-Beta pruning algorithms \
+├── moves.hpp       # Definition of the Move class, representing chess moves \
+└── CMakeLists.txt  # CMake configuration for building the project` \
 
 ## Getting Started
 
